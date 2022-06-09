@@ -68,9 +68,9 @@
   (when (string? path)
     (or
      (some #(string/starts-with? path (str dir "/" %))
-           ["." ".recycle" "node_modules" "logseq/bak" "version-files"])
+           ["." ".recycle" "node_modules" "logseq/bak" "version-files" "assets"])
      (some #(string/includes? path (str "/" % "/"))
-           ["." ".recycle" "node_modules" "logseq/bak" "version-files"])
+           ["." ".recycle" "node_modules" "logseq/bak" "version-files" "assets"])
      (some #(string/ends-with? path %)
            [".DS_Store" "logseq/graphs-txid.edn" "logseq/broken-config.edn"])
      ;; hidden directory or file
