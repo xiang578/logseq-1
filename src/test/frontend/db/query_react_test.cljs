@@ -1,14 +1,12 @@
 (ns frontend.db.query-react-test
   (:require [cljs.test :refer [deftest is use-fixtures]]
             [cljs-time.core :as t]
-            [clojure.pprint]
             [clojure.string :as string]
             [frontend.state :as state]
             [logseq.graph-parser.util.db :as db-util]
             [frontend.test.helper :as test-helper :refer [load-test-files]]
             [frontend.db.query-custom :as query-custom]
             [frontend.db.utils :as db-utils]
-            [frontend.db.react :as react]
             [goog.string :as gstring]))
 
 (use-fixtures :each {:before test-helper/start-test-db!
@@ -18,7 +16,6 @@
   "Use custom-query over react-query for testing since it tests react-query and
 adds rules that users often use"
   [query & [opts]]
-  (react/clear-query-state!)
   (when-let [result (query-custom/custom-query test-helper/test-db query opts)]
     (map first (deref result))))
 
@@ -129,3 +126,24 @@ created-at:: %s"
                                         [(>= ?timestamp ?start)]
                                         [(<= ?timestamp ?end)]]})))
         ":Xd-before-ms and :Xd-after-ms resolve to correct datetime range")))
+
+(deftest cache-input-for-page-inputs
+  (load-test-files [{:file/path "pages/content.md"
+                     :file/content
+                     "- 1 #item1
+- 2 #item2"}])
+
+  (letfn [(query-content-in-page [current-page]
+            (with-redefs [state/get-current-page (constantly current-page)]
+              (map :block/content
+                   (custom-query {:inputs [:current-page]
+                                  :query '[:find (pull ?b [*])
+                                           :in $ ?current-page
+                                           :where
+                                           [?p :page/name ?current-page]
+                                           [?b :block/ref-pages ?p]
+                                           [?b :block/page ?bp]
+                                           [?bp :page/name ?bp-name]]}))))]
+
+    (let [i1 (query-content-in-page "item1") i2 (query-content-in-page "item2")]
+      (is (not= i1 i2) ":current-page input is not corrected cached"))))
