@@ -1,5 +1,5 @@
 import { expect } from '@playwright/test'
-import { test } from './fixtures'
+import { test, traceAll } from './fixtures'
 import { createRandomPage, enterNextBlock, systemModifier, IsMac } from './utils'
 import { dispatch_kb_events } from './util/keyboard-events'
 import * as kb_events from './util/keyboard-events'
@@ -596,3 +596,5 @@ test('should not erase typed text when expanding block quickly after typing #389
     ''
   )
 })
+
+traceAll();
