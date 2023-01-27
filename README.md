@@ -130,77 +130,40 @@ ClojureScript and JS
 
 ![Logseq Credits](https://asset.logseq.com/static/img/credits.png)
 
-## 🧠 Learn more
+## Learn more
 
-- Our blog: [https://blog.logseq.com/](https://blog.logseq.com)
-- Please be sure to visit our [About page](https://blog.logseq.com/about) for the latest updates
-- Twitter: <https://twitter.com/logseq>
-- Forum: <https://discuss.logseq.com> - Where we answer questions, discuss workflows and share tips
-- Discord: <https://discord.gg/KpN4eHY>
-- 中文 Discord：<https://discord.gg/xYqcrXWymg>
-- GitHub: <https://github.com/logseq/logseq> - everyone is encouraged to report issues!
+- Our blog: [https://blog.logseq.com/](https://blog.logseq.com) - Please be sure to visit our [About page](https://blog.logseq.com/about) for the latest updates of the app
+- Twitter: https://twitter.com/logseq
+- Forum: https://discuss.logseq.com - Where we answer questions, discuss workflows and share tips
+- Discord: https://discord.gg/KpN4eHY
+- 中文 Discord：https://discord.gg/xYqcrXWymg
+- GitHub: https://github.com/logseq/logseq - everyone is encouraged to report issues!
 
-<br></br>
+---
 
-# 🫂 Contribute to Logseq
-The following is for developers and designers who want to build and run Logseq locally and
-contribute to this project.
+The following is for developers and designers who want to build and run Logseq locally and contribute to this project.
 
-We have [a dedicated overview
-page](https://github.com/logseq/logseq/blob/master/CODEBASE_OVERVIEW.md) for Logseq's codebase
-overview and [a development practices page](docs/dev-practices.md).
+We have [a dedicated overview page](https://github.com/logseq/logseq/blob/master/CODEBASE_OVERVIEW.md) for Logseq's codebase overview and [a development practices page](docs/dev-practices.md).
 
-## 🛠️ Set up development environment
-- For setting up web app / desktop app development environment on macOS / Linux, please refer to
-[Develop Logseq](docs/develop-logseq.md).
-- For Windows users, please refer to [Develop Logseq on
-Windows](docs/develop-logseq-on-windows.md) in addition.
+## Set up development environment
+* For setting up web app / desktop app development environment on macOS / Linux, please refer to [Develop Logseq](docs/develop-logseq.md).
 
-There are more guides in [docs/](docs/), e.g. the [Guide for contributing to
-translations](docs/contributing-to-translations.md) and the [Docker web app
-guide](docs/docker-web-app-guide.md)
+* For Windows users, please refer to [Develop Logseq on Windows](docs/develop-logseq-on-windows.md) in addition.
 
-## 🌟 How to contribute with a PR
-If you would like to contribute by solving an open issue, please fork this repository and then
-create a branch for the fix.
+There are more guides in [docs/](docs/), e.g. the [Guide for contributing to translations](docs/contributing-to-translations.md) and the [Docker web app guide](docs/docker-web-app-guide.md)
 
-Once you push your code to your fork, you'll be able to open a PR into Logseq repository. For
-more info you can follow this guide from [GitHub docs](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork)
+## How to contribute with a PR
+If you would like to contribute by solving an open issue, please fork this repository and then create a branch for the fix.
 
-And here is a list of some [good first issues](https://github.com/logseq/logseq/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)!
+Once you push your code to your fork, you'll be able to open a PR into Logseq repository. For more info you can follow this guide from [GitHub docs](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork). 
 
-<br></br>
+Enabling "allow edits from maintainers" for PR is highly appreciated!
 
-# 🙏 Thanks to
-<br></br>
-## 💎 Our Open Collective Sponsors
-<p align="center">
-    <a href="https://opencollective.com/logseq" alt="Sponsors on Open Collective">
-        <img src="https://opencollective.com/logseq/tiers/sponsors.svg?avatarHeight=42&width=600"/></a>
-</p>
+There's a nice [project board](https://github.com/orgs/logseq/projects/5/views/1?pane=info
+) listing items that easy for contributors to catch-up
 
-## 🫶 Our Backers
-<p align="center">
-    <a href="https://opencollective.com/logseq" alt="Backers on Open Collective">
-        <img src="https://opencollective.com/logseq/tiers/backers.svg?avatarHeight=24&width=600"/></a>
-</p>
+And here a list of some [good first issues](https://github.com/logseq/logseq/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)!
 
-## 🌟 Our Contributors
-<p align="center">
-    <a href="https://github.com/logseq/logseq/graphs/contributors">
-        <img src="https://contrib.rocks/image?repo=logseq/logseq&max=300&columns=14" width="600"/></a>
-</p>
+## Thanks
 
-
-        
-<p align="center">
-    <a href="https://jetbrains.com" alt="JetBrains">
-        <img src="docs/assets/jetbrains.svg"/></a>
-</p>
-
-<a href="https://www.producthunt.com/posts/logseq?utm_source=badge-review&utm_medium=badge&utm_souce=badge-logseq#discussion-body"
-    target="_blank"><img
-        src="https://api.producthunt.com/widgets/embed-image/v1/review.svg?post_id=298158&theme=dark"
-        align="right"
-        alt="Logseq - Your joyful, private digital garden | Product Hunt" style="width: 250px; height: 54px;"
-        width="250" height="54"/></a>
+[![JetBrains](docs/assets/jetbrains.svg)](https://www.jetbrains.com/?from=logseq)
